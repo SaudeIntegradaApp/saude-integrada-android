@@ -24,6 +24,7 @@ import androidx.compose.material.icons.rounded.CheckCircle
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Card
+import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.Icon
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Surface
@@ -34,6 +35,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.ColorFilter
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.style.TextAlign
@@ -82,11 +84,11 @@ fun Login () {
                 Spacer(modifier = Modifier.height(20.dp))
                 Card (
                     modifier = Modifier
-                        .align(Alignment.CenterHorizontally)
-
+                        .align(Alignment.CenterHorizontally),
+                    colors = CardDefaults.cardColors(containerColor = Color.White)
                 )
                 {
-                    Image(painter = painterResource(id = R.drawable.icone_saude)
+                    Image(painter = painterResource(id = R.drawable.logo_saude)
                         , contentDescription = "ícone do projeto saúde integrada",
                         modifier = Modifier
                             .size(width = 49.dp, height = 49.dp)
@@ -207,7 +209,8 @@ fun Login () {
                         contentDescription = "ícone google",
                         modifier = Modifier
                             .size(width = 26.dp, height = 26.5.dp)
-                            .clip(RoundedCornerShape(15.dp))
+                            .clip(RoundedCornerShape(15.dp)),
+                        colorFilter = ColorFilter.tint(color = Color(0xff5861E2))
                     )
                     Text(text = "Google",
                         color = (Color(0xff5861E2)),
@@ -227,8 +230,10 @@ fun Login () {
                         Image(
                             painter = painterResource(id = R.drawable.facebook),
                             contentDescription = "ícone facebook",
-                            modifier = Modifier.size(width = 26.dp, height = 26.5.dp)
-                                .clip(RoundedCornerShape(15.dp))
+                            modifier = Modifier
+                                .size(width = 26.dp, height = 26.5.dp)
+                                .clip(RoundedCornerShape(15.dp)),
+                            colorFilter = ColorFilter.tint(color= Color.White)
                         )
                         Text(text = "Facebook",
                             color = (Color.White),

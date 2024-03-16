@@ -20,6 +20,7 @@ import androidx.compose.material.icons.rounded.CheckCircle
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Card
+import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.Icon
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
@@ -35,6 +36,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import br.com.fiap.saudeintegrada.R
+import br.com.fiap.saudeintegrada.R.drawable
 import br.com.fiap.saudeintegrada.ui.theme.InterBold
 
 
@@ -52,10 +54,12 @@ fun BemVindo() {
                 .align(Alignment.Center)
         ) {
             Card(
-                modifier = Modifier.align(Alignment.CenterHorizontally)
+                modifier = Modifier.align(Alignment.CenterHorizontally),
+                colors = CardDefaults.cardColors(containerColor = Color.White)
+
             ) {
                 Image(
-                    painter = painterResource(id = R.drawable.icone_saude),
+                    painter = painterResource(id = R.drawable.logo_saude),
                     contentDescription = "ícone do projeto saúde integrada",
                     modifier = Modifier.size(width = 91.dp, height = 91.dp),
                     contentScale = ContentScale.Fit
