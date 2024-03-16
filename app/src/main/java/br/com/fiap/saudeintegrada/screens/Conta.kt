@@ -24,6 +24,7 @@ import androidx.compose.material.icons.rounded.CheckCircle
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Card
+import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.Checkbox
 import androidx.compose.material3.CheckboxDefaults
 import androidx.compose.material3.Icon
@@ -87,10 +88,11 @@ fun Conta () {
                 Spacer(modifier = Modifier.height(20.dp))
                 Card (
                     modifier = Modifier
-                        .align(Alignment.CenterHorizontally)
+                        .align(Alignment.CenterHorizontally),
+                    colors = CardDefaults.cardColors(containerColor = Color.White)
                 )
                 {
-                    Image(painter = painterResource(id = R.drawable.icone_saude)
+                    Image(painter = painterResource(id = R.drawable.logo_saude)
                         , contentDescription = "ícone do projeto saúde integrada",
                         modifier = Modifier
                             .size(width = 49.dp, height = 49.dp)
@@ -328,7 +330,7 @@ fun Conta () {
 }
 
 
-@Preview(showSystemUi = true)
+@Preview(showSystemUi = false)
 @Composable
 fun ContaPreview() {
     Surface (
